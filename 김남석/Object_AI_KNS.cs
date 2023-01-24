@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Object_AI1 : MonoBehaviour
+public class Object_AI_KNS : MonoBehaviour
 {
     private class MoveFollowTarget : Node
     {
-        public ObjectMove1 obj
+        public ObjectMove_KNS obj
         {
             set { _obj = value; }
         }
-        private ObjectMove1 _obj;
+        private ObjectMove_KNS _obj;
         public override bool Invoke()
         {
             return _obj.MoveFollowTarget();
@@ -20,11 +20,11 @@ public class Object_AI1 : MonoBehaviour
 
     private class MoveBackollowTarget : Node
     {
-        public ObjectMove1 obj
+        public ObjectMove_KNS obj
         {
             set { _obj = value; }
         }
-        private ObjectMove1 _obj;
+        private ObjectMove_KNS _obj;
         public override bool Invoke()
         {
             return _obj.MoveBackollowTarget();
@@ -34,11 +34,11 @@ public class Object_AI1 : MonoBehaviour
 
     private class IsDead : Node
     {
-        public ObjectMove1 obj
+        public ObjectMove_KNS obj
         {
             set { _obj = value; }
         }
-        private ObjectMove1 _obj;
+        private ObjectMove_KNS _obj;
         public override bool Invoke()
         {
             return _obj.IsDead();
@@ -47,11 +47,11 @@ public class Object_AI1 : MonoBehaviour
 
     private class OnAttack : Node
     {
-        public ObjectMove1 obj
+        public ObjectMove_KNS obj
         {
             set { _obj = value; }
         }
-        private ObjectMove1 _obj;
+        private ObjectMove_KNS _obj;
         public override bool Invoke()
         {
             return _obj.AddBullet();
@@ -68,12 +68,12 @@ public class Object_AI1 : MonoBehaviour
     private OnAttack m_OnAttack = new OnAttack();
     private IsDead m_IsDead = new IsDead();
 
-    private ObjectMove1      m_obj;
+    private ObjectMove_KNS      m_obj;
     private IEnumerator     behaviorProcess;
 
     public  void Init()
     {
-        m_obj = gameObject.GetComponent<ObjectMove1>();
+        m_obj = gameObject.GetComponent<ObjectMove_KNS>();
 
         root.AddChild(selector);
 

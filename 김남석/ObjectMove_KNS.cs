@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectMove1 : MonoBehaviour
+public class ObjectMove_KNS : MonoBehaviour
 {
     public GameObject Prefab_bullet;
     Vector3 Dir;
@@ -18,34 +18,102 @@ public class ObjectMove1 : MonoBehaviour
     /// 추가 변수는 아래에 추가할것
     /// 
 
+    private bool follow = true;
+    private Vector3 Obj2_Pre_Pos = Vector3.zero;
+    private Vector3 Obj2_Delta_Esti = Vector3.zero;
+    private Vector3 Obj2_Delta_Pos = Vector3.zero;
+    
+
+    private float onRBE(float x, float beforeDir)
+    {
+        float p1 = x * x;
+        float p2 = p1 / 2;
+
+        float RBE = Mathf.Exp(-p1 / (p2 * p2));
+
+        if (p1 == 0)
+            RBE = 0;
+
+        float dir = x * RBE;
+
+        return beforeDir * 0.5f + dir * 0.5f;
+    }    
 
     public bool MoveFollowTarget()
     {
-        if (Obj1_Hp >= 50)
-        {
-  
-            Dir = Obj2_Pos - gameObject.transform.position;
-            Dir.Normalize();
-            Quaternion Rot = Quaternion.LookRotation(Dir, new Vector3(0, 1, 0));
+        if (follow)
+        {            
             
-            gameObject.transform.localRotation = Rot;
+            Dir = Obj2_Pos - gameObject.transform.position + Obj2_Delta_Esti;
+            Dir.Normalize();            
+            Quaternion Rot = Quaternion.LookRotation(Dir, new Vector3(0, 1, 0));            
+            gameObject.transform.localRotation = Rot;                 
             gameObject.transform.position += Dir * speed;
+
+            if(nTime % 100 <= 1)
+            {                
+                if(Obj2_Pre_Pos != Vector3.zero)
+                {
+                    Obj2_Delta_Pos = Obj2_Pos - Obj2_Pre_Pos;
+
+                    Obj2_Delta_Esti.x = onRBE(Obj2_Delta_Pos.x, Obj2_Delta_Esti.x);
+                    Obj2_Delta_Esti.z = onRBE(Obj2_Delta_Pos.z, Obj2_Delta_Esti.z);
+                }    
+
+
+                Obj2_Pre_Pos = Obj2_Pos;
+
+                if (Vector3.Distance(Obj1_Pos, Obj2_Pos) < 30.0f)
+                {
+                    follow = false;
+                }
+                if (Vector3.Distance(Obj1_Pos, Obj2_Pos) >= 30.0f)
+                {
+                    follow = true;
+                }
+            }
+
             return true;
-        }
+        }        
+
         return false;
     }
 
     public bool MoveBackollowTarget()
     {
-        if (Obj1_Hp < 50 && Obj1_Hp > 0)
-        {
-            Dir = Obj2_Pos - gameObject.transform.position;
+        if (!follow)
+        {            
+            Dir = Obj2_Pos - gameObject.transform.position + Obj2_Delta_Esti;
             Dir.Normalize();
+            Dir = Quaternion.Euler(0, 25, 0) * Dir;
             Quaternion Rot = Quaternion.LookRotation(Dir, new Vector3(0, 1, 0));
+
             gameObject.transform.localRotation = Rot;
             gameObject.transform.position -= Dir * speed;
+
+            if (nTime % 100 <= 1)
+            {
+                Obj2_Delta_Pos = Obj2_Pos - Obj2_Pre_Pos;
+                
+                Obj2_Delta_Esti.x = onRBE(Obj2_Delta_Pos.x, Obj2_Delta_Esti.x);
+                Obj2_Delta_Esti.z = onRBE(Obj2_Delta_Pos.z, Obj2_Delta_Esti.z);
+
+                Obj2_Pre_Pos = Obj2_Pos;
+
+                if (Vector3.Distance(Obj1_Pos, Obj2_Pos) < 30.0f)
+                {
+                    follow = false;
+                }
+                if (Vector3.Distance(Obj1_Pos, Obj2_Pos) >= 30.0f)
+                {
+                    follow = true;
+                }
+            }
+
             return true;
         }
+        
+
         return false;
     }
 
@@ -60,7 +128,8 @@ public class ObjectMove1 : MonoBehaviour
     public bool AddBullet()
     {
         if (Obj1_Hp > 0)
-        {
+        {      
+
             if (nTime % 100 == 0)
             {
                 GameObject bullet = GameObject.Instantiate(Prefab_bullet) as GameObject;
