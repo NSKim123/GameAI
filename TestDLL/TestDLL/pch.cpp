@@ -4,6 +4,7 @@
 #include <assert.h>
 #include <process.h>
 #include <math.h>
+#include <omp.h>
 #include "MainScene.h"
 #pragma warning(disable:4996)
 #define UNITY_INTERFACE_API  __stdcall
@@ -21,6 +22,26 @@ extern "C" void UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API Init()
 	m_pMainScene = NULL;
 	m_pMainScene = new CMainScene;
 	m_pMainScene->init();
+
+	int t = -10000;
+
+	int thread_num = omp_get_max_threads() * 0.5;
+	if (thread_num <= 0)
+		thread_num = 1;
+	omp_set_num_threads(thread_num);
+
+	int tid = 0;
+#pragma omp parallel private(tid)  //병렬 프로세스
+	{
+		tid = omp_get_thread_num();
+		for (int i = tid; i < 100000000; i+= thread_num)
+		{
+			int p = (int)cos(i * 100.0f) * 10 + (int)sin(i * 100.0f) * 10;
+			t += p;
+		}
+	}
+
+	printf("Init");
 }
 
 extern "C" void UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API onRelease()

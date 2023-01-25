@@ -19,7 +19,7 @@ public class DLLLoader : MonoBehaviour
     }   
     void FixedUpdate()
     {
-        int state = GetState();    
+        //int state = GetState();    
     }
     private void OnApplicationQuit()
     {
