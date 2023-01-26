@@ -51,6 +51,8 @@ int main()
 
 	int time = 0;
 	bool IsGoal = false;
+	Vector2f Response = Vector2f(0,0);
+	int AliveCount = 0;
 	while (1)
 	{
 		Mat tmap = map.clone();
@@ -81,7 +83,11 @@ int main()
 					m_Particle[i].life = false;
 
 				if (m_Particle[i].life == true)
+				{
 					circle(tmap, Point(m_Particle[i].Pos.x, m_Particle[i].Pos.y), 3, Scalar(0, 255, 0), -1);
+					Response += Vector2f(m_Particle[i].Pos.x, m_Particle[i].Pos.y);
+					AliveCount++;
+				}
 				
 			}
 			else
@@ -91,13 +97,24 @@ int main()
 
 			if (m_Particle[i].life == false)
 			{
-				m_Particle[i].Pos = Vector2f(0, 0);
+				//m_Particle[i].Pos = Vector2f(0, 0);
 				float r = (rand() % 360) / 180.0f * 3.14;
 				m_Particle[i].Dir = Vector2f(sin(r), cos(r));
 				m_Particle[i].Speed = rand() % 5 + 1;
 				m_Particle[i].life = true;
 			}
 		}
+		Response /= AliveCount;
+		for(int i = 0; i < m_Particle.size(); i++)
+		{
+			if(m_Particle[i].life == false)
+			{
+				m_Particle[i].Pos = Response;
+			}
+		}
+		Response = Vector2f(0,0);
+		AliveCount = 0;
+
 		circle(tmap, Point(Goal.x, Goal.y), 10, Scalar(255, 0, 0), -1);
 
 		char str[255];
