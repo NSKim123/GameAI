@@ -115,7 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="main_KNS.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vector.h" />
