@@ -4,44 +4,27 @@ C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\OpenCV\Include\opencv2\
 C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\OpenCV\Include\opencv2\core\utility.hpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
 C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\vector.h(56,11): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\vector.h(71,11): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(21,22): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(21,19): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(35,11): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(37,24): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(75,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(79,13): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(81,38): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(92,65): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(92,44): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(93,65): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(93,44): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(94,65): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(94,44): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(111,63): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(329,30): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(329,27): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(357,62): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
           with
           [
               _Tp=int
           ]
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(111,42): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(357,41): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
           with
           [
               _Tp=int
           ]
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(125,13): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(127,38): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(145,34): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(362,44): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
           with
           [
               _Tp=int
           ]
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(145,26): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(362,31): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
           with
           [
               _Tp=int
           ]
-C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\main_KNS.cpp(150,33): warning C4244: '인수': 'double'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-          with
-          [
-              _Tp=int
-          ]
+C:\Users\User\Documents\GitHub\GameAI\Particle1\Particle\LUA\InitLua.h(10): warning C4172: 지역 변수 또는 임시: _iob의 주소를 반환하고 있습니다.
   Particle.vcxproj -> C:\Users\User\Documents\GitHub\GameAI\Particle1\Debug\Particle.exe
