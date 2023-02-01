@@ -1,57 +1,52 @@
 math.randomseed(os.time())
 
 function onInit(id)
-	posx = 0
-	posy = 0
-	r = math.random(0,360) / 180.0 * 3.14
-	dirx =math.sin(r)
-	diry =math.cos(r)
-	speed = math.random(0,5) +1
-	life= 1
-	SetParticle(id, posx, posy, dirx, diry, speed, life)
+	posx = 300
+	posy = 300
+	r = math.random(0,360)/180.0*3.14
+	dirx = math.sin(r)
+	diry = math.cos(r)
+	speed= math.random(0,5)+1
+	MaxLen = 10000
+	SetParticle(id,posx,posy,dirx,diry,speed,MaxLen)
 end
 
 function onFrameMove(id, frametime)
-	posx, posy, dirx, diry, speed, life = GetParticle(id)
-	goalx, goaly = GetGoalPos()
+	posx,posy,dirx,diry,speed,MaxLen=GetParticle(id)
+	goalx,goaly =GetGoalPos()
 
-	if life == 0 then
-		posx = 0
-		posy = 0
-		r= math. random(0,360) / 180.0*3.14
+
+	if frametime% 10 == 0 then
+		r = math.random(0,360)/180.0*3.14
 		dirx = math.sin(r)
 		diry = math.cos(r)
-		speed = math.random(0,5) +1
-		life = 1
-	end
-	
-	if frametime % 50 ==0 then
-		r=  math. random(0,360) / 180.0*3.14
-		dirx = math.sin(r)
-		diry = math.cos(r)
-		speed = math.random(0,5) +1
+		speed= math.random(0,5)+1		
 	end
 
-	posx = posx + (dirx * speed)
-	posy = posy + (diry * speed)
+	tdirx = dirx
+	tdiry = diry
 
-	px = posx - goalx
-	py = posy - goaly
+	px = goalx - posx
+	py = goaly - posy
 	pt = GetLength(px, py)
+	len = pt/MaxLen	
 
-	if pt <=10 then
-		SetGoal(1)
-	end
+	plx, ply = Normalize(px,py)
+	tdirx = (dirx * (1.0 - len)) + (plx * len)
+	tdiry = (diry * (1.0 - len)) + (ply * len)
+	
+	tdirx, tdiry = Normalize(tdirx, tdiry)
 
-	if posx >= 0 and posx < 600 and posy >=0 and posy < 600 then
-		if GetCollision(posx, posy) == 1 then
-			life = 0
-		end
-	else
-		life = 0
-	end
-
-	SetParticle(id, posx, posy, dirx, diry, speed, life)
+	posx = posx + (tdirx * speed)
+	posy = posy + (tdiry * speed)
+	
+	
+	SetParticle(id,posx,posy,dirx,diry,speed,MaxLen)
 end
 
-	
+
+
+
+
+
+
