@@ -1,0 +1,4 @@
+﻿  GA.cpp
+C:\Users\User\Downloads\Gomoku\Gomoku\FreeImageLoader.h(11,9): warning C4101: 'szDst' :참조되지 않은 지역 변수입니다.
+C:\Users\User\Downloads\Gomoku\Gomoku\GA\GA.cpp(285,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Gomoku.vcxproj -> C:\Users\User\Downloads\Gomoku\Debug\Gomoku.exe
