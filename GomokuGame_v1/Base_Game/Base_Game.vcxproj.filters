@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\Engine">
+      <UniqueIdentifier>{9b61a777-fa39-4b4f-bdb3-62e8d30afdc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Engine\Sprite">
+      <UniqueIdentifier>{c7266c80-a791-4f3b-ab34-eb3d43a073e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Engine\Texture">
+      <UniqueIdentifier>{20d2f1d9-bfdf-472b-8dcf-0c01523c7d72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Engine\vector">
+      <UniqueIdentifier>{42d74298-046c-4f3a-a836-a3c949c572dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Stage">
+      <UniqueIdentifier>{7e189eb7-85bc-4c4a-b728-2f1d2dd321d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Stage\GA">
+      <UniqueIdentifier>{8956f7fe-c0f5-4d30-8ea4-8e9568c9c263}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Vritual_GA.cpp">
+      <Filter>소스 파일\Stage\GA</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>소스 파일\Engine\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>소스 파일\Engine\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="vector.h">
+      <Filter>소스 파일\Engine\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>소스 파일\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Vritual_GA.h">
+      <Filter>소스 파일\Stage\GA</Filter>
+    </ClInclude>
+    <ClInclude Include="GA.h">
+      <Filter>소스 파일\Stage\GA</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
