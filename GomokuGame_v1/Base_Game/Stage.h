@@ -245,10 +245,10 @@ public:
 		m_nturnid++;
 		m_nFramenum = 0;
 		m_pGAW = new cGA ();
-		m_pGAW->Init(m_nMap, WHITE);
+		m_pGAW->Init(m_nMap, WHITE, 0.2f);
 
 		m_pGAB = new  cGA();
-		m_pGAB->Init(m_nMap, BLACK);
+		m_pGAB->Init(m_nMap, BLACK, 0.8f);
 		m_nlposx = 6;
 		m_nlposy = 6;
 	}

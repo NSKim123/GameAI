@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "MainScene.h"
 #include <time.h>
 #include <direct.h>
@@ -191,4 +192,129 @@ bool CMainScene::GetCheckGene(int i)
 
 	m_Gene[i].re += 7.1 - (length(EnemyIndex +(- m_HeroIndex)));
 	return true;
+}
+
+void CMainScene::onCreateGene()
+{
+	OnInitGene();
+	for (int n = 0;n < m_nMaxgeneration; n++)
+	{
+		for (int i = 0;i < m_Gene.size();i++)
+		{
+			GetCheckGene(i);
+		}
+		sort(m_Gene.begin(), m_Gene.end(), comp);
+
+		OnReleaseGene();
+		if (n != m_nMaxgeneration - 1)
+			OnMatingGene();
+	}
+}
+
+void CMainScene::OnMatingGene()
+{
+	int count = m_Gene.size();
+	for (int i = 0;i < count;i++)
+	{
+		for (int j = 0;j < count; j++)
+		{
+			if (i != j)
+			{
+				int pt = rand() % 5 + 1;
+				int pt1 = 5 - pt;
+				GENE a;
+				memcpy(a.g, m_Gene[i].g, sizeof(int) * pt);
+				memcpy(&a.g[pt], &m_Gene[j].g[pt1], sizeof(int) * pt1);
+
+				int r = rand() % 2;
+				if (r == 1)
+				{
+					int t = rand() % 5;
+					a.g[t] = rand() % 5;
+				}
+				a.re = 0;
+				m_Gene.push_back(a);
+			}
+
+		}
+	}
+}
+
+void CMainScene::FrameMove()
+{
+	if (m_DoGeneCount != m_beforeDoGeneCount)
+	{
+		if (m_DoGeneCount >= 5)
+		{
+			m_DoGeneCount = -1;
+		}
+		m_HeroIndex = GetIndexPos(m_HeroPos);
+		if (m_DoGeneCount == -1)
+		{
+			printf("CREATE GENE!!\n");
+			onCreateGene();
+			while (m_Gene[0].re <= 10)
+			{
+				printf("RE : %0.2f RECREATE GENE!!\n", m_Gene[0].re);
+					onCreateGene();
+			}
+			m_DoGeneCount++;
+			printf("CREATE GENERE: %0.2f !! \n", m_Gene[0].re); //0.2f
+		}
+		if (m_DoGeneCount <= 4)
+		{
+			m_nState = m_Gene[0].g[m_DoGeneCount];
+
+			vec3 EnemyIndex = GetIndexPos(m_EnemyPos);
+			if (m_Gene[0].g[m_DoGeneCount] == 0)
+			{
+				printf("DoGene %d Forward !! \n", m_DoGeneCount);
+				EnemyIndex.y--;
+			}
+			if (m_Gene[0].g[m_DoGeneCount] == 1)
+			{
+				printf("DoGene %d Backward !! \n", m_DoGeneCount);
+				EnemyIndex.y++;
+			}
+			if (m_Gene[0].g[m_DoGeneCount] == 2)
+			{
+				printf("DoGene %d Left !! \n", m_DoGeneCount);
+				EnemyIndex.x--;
+			}
+			if (m_Gene[0].g[m_DoGeneCount] == 3)
+			{
+				printf("DoGene %d Right !! \n", m_DoGeneCount);
+				EnemyIndex.x++;
+			}
+			if (m_Gene[0].g[m_DoGeneCount] == 4)
+			{
+				printf("DoGene %d Attack !! \n", m_DoGeneCount);				
+			}
+
+			m_EnemyGoalPos = GetVec3Pos(EnemyIndex.y, EnemyIndex.x);
+		}
+		m_beforeDoGeneCount = m_DoGeneCount;
+	}
+	if (m_nState >= 0 && m_nState < 4)
+	{
+		m_EnemyDir = normalize(m_EnemyGoalPos + (-m_EnemyPos));
+		m_EnemyPos += m_EnemyDir * 0.1f;
+		float len = length(m_EnemyGoalPos +(-m_EnemyPos));
+		if (len <= 0.7)
+		{
+			m_EnemyPos = m_EnemyGoalPos;
+			m_DoGeneCount++;
+		}
+	}
+
+	if (m_nState == 4)
+	{
+		m_nAttackTime++;
+		m_EnemyDir = normalize(m_HeroPos +(-m_EnemyPos));
+		if (m_nAttackTime >= 100)
+		{
+			m_DoGeneCount++;
+			m_nAttackTime = 0;
+		}
+	}
 }

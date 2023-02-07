@@ -27,6 +27,10 @@ struct vec3
 	{
 		return vec3(x + v.x, y + v.y, z + v.z);
 	}
+	vec3 operator -(const vec3& v)const
+	{
+		return vec3(x - v.x, y - v.y, z - v.z);
+	}
 
 	vec3 operator *(const float s)const
 	{
