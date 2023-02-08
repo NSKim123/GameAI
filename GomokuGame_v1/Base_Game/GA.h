@@ -1,5 +1,5 @@
-#ifndef GA_H
-#define GA_H
+#ifndef LJ_GA_H
+#define LJ_GA_H
 
 #define MAPSIZE 13
 
@@ -141,13 +141,13 @@ private:
 		{
 			if(m_ppMap[x][y]==0)
 			{
-				//Vector2f v = Vector2f(x,y)-m_vUserPos;
-				
+				Vector2f v = Vector2f(x,y)-m_vUserPos;
+
 				//float p1 = 1.0f-(v.Length()/MAPSIZE);
-				float tThisWinRate =GetCheckWinrate(this->m_nMyID,x,y);
-				float tOtherWinRate =GetCheckWinrate(this->m_nMyID % 2 + 1,x,y);
-				float g1 =1.0f-m_fg;				
-				float t = (tThisWinRate*m_fg)+(tOtherWinRate*g1);
+				float tw =GetCheckWinrate(WHITE,x,y);
+				float tb =GetCheckWinrate(BLACK,x,y);
+				float g1 =1.0f-m_fg;
+				float t = (tw*m_fg)+(tb*g1);
 				float p2 = (t*1.0);
 				m_GeneList[id].re=p2;
 				return p2;
@@ -169,8 +169,6 @@ private:
 		bool left=false;
 		bool right=false;
 		bool siege = false;
-		bool t1 = false;
-		bool t2 = false;
 
 		for(int i=1;i<8;i++)
 		{
@@ -179,39 +177,29 @@ private:
 
 			int dx1 = x-i;
 			int dx2 = x+i;
-			
+
 			if(m_ppMap[dx1][y]==mid&&left==false&&dx1>=0&&dx1<MAPSIZE)
 			{
-				count[0]++;						
-			}			
-			else if (t1 = false && m_ppMap[dx1][y] == 0 && left == false && dx1 >= 0 && dx1 < MAPSIZE)
-			{
-				count[0]++;
-				t1 = true;
+					count[0]++;
+
+					
 			}
 			else
-			{
-				left = true;							
-			}
-
-			
-
+				left=true;
 			if(m_ppMap[dx2][y]==mid&&right==false&&dx2>=0&&dx2<MAPSIZE)
-			{				
-				count[0]++;				
-			}			
-			else if (t2 = false && m_ppMap[dx2][y] == 0 && left == false && dx2 >= 0 && dx2 < MAPSIZE)
 			{
-				count[0]++;
-				t2 = true;
+				if (dx2 = MAPSIZE)
+					break;
+				else
+				{
+					count[0]++;
+				}
 			}
 			else
 				right=true;
 		}
 		left = false;
 		right = false;
-		t1 = false;
-		t2 = false;
 
 		// --------------------------------- 위 아래 확인-------------------------------------------------
 
@@ -226,23 +214,12 @@ private:
 			if(m_ppMap[x][dy1]==mid&&left==false&&dy1>=0&&dy1<MAPSIZE)
 			{
 				count[1]++;
-			}			
-			else if (t1 = false && m_ppMap[x][dy1] == 0 && left == false && dy1 >= 0 && dy1 < MAPSIZE)
-			{
-				count[1]++;
-				t1 = true;
 			}
 			else
 				left=true;
-
 			if(m_ppMap[x][dy2]==mid&&right==false&&dy2>=0&&dy2<MAPSIZE)
 			{
 				count[1]++;
-			}			
-			else if (t2 = false && m_ppMap[x][dy2] == 0 && left == false && dy2 >= 0 && dy2 < MAPSIZE)
-			{
-				count[1]++;
-				t2 = true;
 			}
 			else
 				right=true;
@@ -250,8 +227,6 @@ private:
 
 		left=false;
 		right=false;
-		t1 = false;
-		t2 = false;
 
 		// --------------------------------------- 대각선 확인-------------------------------------------------
 		for(int i=1;i<8;i++)
@@ -268,23 +243,12 @@ private:
 			if(m_ppMap[dx1][dy1]==mid&&left==false&&dx1>=0&&dx1<MAPSIZE&&dy1>=0&&dy1<MAPSIZE)
 			{
 				count[2]++;
-			}			
-			else if (t1 = false && m_ppMap[dx1][dy1] == 0 && left == false && dx1 >= 0 && dx1 < MAPSIZE && dy1 >= 0 && dy1 < MAPSIZE)
-			{
-				count[2]++;
-				t1 = true;
 			}
 			else
 				left=true;
-
 			if(m_ppMap[dx2][dy2]==mid&&right==false&&dx2>=0&&dx2<MAPSIZE&&dy2>=0&&dy2<MAPSIZE)
 			{
 				count[2]++;
-			}			
-			else if (t2 = false && m_ppMap[dx2][dy2] == 0 && left == false && dx2 >= 0 && dx2 < MAPSIZE && dy2 >= 0 && dy2 < MAPSIZE)
-			{
-				count[2]++;
-				t2 = true;
 			}
 			else
 				right=true;
@@ -292,8 +256,6 @@ private:
 
 		left=false;
 		right=false;
-		t1 = false;
-		t2 = false;
 		// --------------------------------------- 대각선 확인-------------------------------------------------
 
 		for(int i=1;i<8;i++)
@@ -307,34 +269,22 @@ private:
 			int dx2 = x-i;
 			int dy2 = y-i;
 
-			if (m_ppMap[dx1][dy1] == mid && left == false && dx1 >= 0 && dx1 < MAPSIZE && dy1 >= 0 && dy1 < MAPSIZE)
+			if(m_ppMap[dx1][dy1]==mid&&left==false&&dx1>=0&&dx1<MAPSIZE&&dy1>=0&&dy1<MAPSIZE)
 			{
 				count[3]++;
-			}			
-			else if (t1 = false && m_ppMap[dx1][dy1] == 0 && left == false && dx1 >= 0 && dx1 < MAPSIZE && dy1 >= 0 && dy1 < MAPSIZE)
-			{
-				count[3]++;
-				t1 = true;
 			}
 			else
-				left = true;
-
-			if (m_ppMap[dx2][dy2] == mid && right == false && dx2 >= 0 && dx2 < MAPSIZE && dy2 >= 0 && dy2 < MAPSIZE)
+				left=true;
+			if(m_ppMap[dx2][dy2]==mid&&right==false&&dx2>=0&&dx2<MAPSIZE&&dy2>=0&&dy2<MAPSIZE)
 			{
 				count[3]++;
-			}			
-			else if (t2 = false && m_ppMap[dx2][dy2] == 0 && left == false && dx2 >= 0 && dx2 < MAPSIZE && dy2 >= 0 && dy2 < MAPSIZE)
-			{
-				count[3]++;
-				t2 = true;
 			}
 			else
-				right = true;
+				right=true;
 		}
 		left = false;
 		right = false;
-		t1 = false;
-		t2 = false;
+
 
 		int Max=0;
 		for(int i=0; i<4;i++)
@@ -351,10 +301,9 @@ public:
 	cGA(){}
 	~cGA(){}
 
-	void Init(int (*data)[MAPSIZE],int myid, float fg)
+	void Init(int (*data)[MAPSIZE],int myid)
 	{
-		m_fg =fg;
-		
+		m_fg =0.2;
 		srand(time(NULL));
 		m_ppMap=data;
 		m_GeneList.clear();
