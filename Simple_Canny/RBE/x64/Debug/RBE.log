@@ -1,0 +1,11 @@
+﻿main.obj : error LNK2019: "void __cdecl cv::fastFree(void *)" (?fastFree@cv@@YAXPEAX@Z)"public: __cdecl cv::Mat::~Mat(void)" (??1Mat@cv@@QEAA@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+main.obj : error LNK2019: "private: char * __cdecl cv::String::allocate(unsigned __int64)" (?allocate@String@cv@@AEAAPEAD_K@Z)"public: __cdecl cv::String::String(char const *)" (??0String@cv@@QEAA@PEBD@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+main.obj : error LNK2019: "private: void __cdecl cv::String::deallocate(void)" (?deallocate@String@cv@@AEAAXXZ)"public: __cdecl cv::String::~String(void)" (??1String@cv@@QEAA@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+main.obj : error LNK2019: "void __cdecl cv::error(int,class cv::String const &,char const *,char const *,int)" (?error@cv@@YAXHAEBVString@1@PEBD1H@Z)"public: class cv::Vec<unsigned char,3> & __cdecl cv::Mat::at<class cv::Vec<unsigned char,3> >(int,int)" (??$at@V?$Vec@E$02@cv@@@Mat@cv@@QEAAAEAV?$Vec@E$02@1@HH@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+main.obj : error LNK2019: "public: void __cdecl cv::Mat::deallocate(void)" (?deallocate@Mat@cv@@QEAAXXZ)"public: void __cdecl cv::Mat::release(void)" (?release@Mat@cv@@QEAAXXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+main.obj : error LNK2019: cvWaitKeymain 함수에서 참조되는 확인할 수 없는 외부 기호
+main.obj : error LNK2019: "class cv::Mat __cdecl cv::imread(class cv::String const &,int)" (?imread@cv@@YA?AVMat@1@AEBVString@1@H@Z)main 함수에서 참조되는 확인할 수 없는 외부 기호
+main.obj : error LNK2019: "void __cdecl cv::imshow(class cv::String const &,class cv::_InputArray const &)" (?imshow@cv@@YAXAEBVString@1@AEBV_InputArray@1@@Z)main 함수에서 참조되는 확인할 수 없는 외부 기호
+OpenCV\Lib\opencv_world300d.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+OpenCV\Lib\opencv_ts300d.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+C:\Users\User\Documents\GitHub\GameAI\Simple_Canny\x64\Debug\RBE.exe : fatal error LNK1120: 8개의 확인할 수 없는 외부 참조입니다.
