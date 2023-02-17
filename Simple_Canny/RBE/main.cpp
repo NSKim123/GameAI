@@ -54,12 +54,11 @@ Mat onCanny(Mat& img, float Thr1, float Thr2)
 					int xx = dx + x;
 					int yy = dy + y;
 
+					//소벨 마스크
 					float t = dx;
 					if (dy == 0)
 						t *= 2;
-					
-					if (dy == 1)
-						t *= -1;
+									
 
 					float t1 = dy * -1;
 					if (dx == 0)
