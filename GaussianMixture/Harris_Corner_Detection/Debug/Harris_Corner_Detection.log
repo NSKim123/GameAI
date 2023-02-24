@@ -1,0 +1,46 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 중간 디렉터리(Debug\)에 다른 프로젝트(Harris_Corner_Detection.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+  main.cpp
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\OpenCV\Include\opencv2\core\mat.hpp(1965,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\OpenCV\Include\opencv2\core\persistence.hpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\OpenCV\Include\opencv2\core\utility.hpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(130,9): warning C4068: 알 수 없는 pragma 'dmp'
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(133,9): warning C4068: 알 수 없는 pragma 'dmp'
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(143,35): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(157,47): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(157,34): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(157,11): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(167,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(196,13): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(197,13): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(198,13): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(204,30): warning C4244: '=': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=uchar
+          ]
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(205,30): warning C4244: '=': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=uchar
+          ]
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(206,30): warning C4244: '=': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=uchar
+          ]
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(215,30): warning C4244: '=': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=uchar
+          ]
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(216,30): warning C4244: '=': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=uchar
+          ]
+C:\Users\User\Documents\GitHub\GameAI\KNN2\Harris_Corner_Detection\main.cpp(217,30): warning C4244: '=': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=uchar
+          ]
+  Harris_Corner_Detection.vcxproj -> C:\Users\User\Documents\GitHub\GameAI\KNN2\Debug\KNN.exe

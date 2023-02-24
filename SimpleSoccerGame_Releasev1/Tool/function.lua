@@ -34,6 +34,10 @@ function GetScore()
   return TGetScore(Team_ID)
 end
 
+function GetGameTime()
+  return TGetGameTime()
+end
+
 function WhoAttack()
   return TWhoAttack(Team_ID)
 end

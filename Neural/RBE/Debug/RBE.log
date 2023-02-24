@@ -1,0 +1,68 @@
+﻿  main.cpp
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\SBS_NN.h(32,15): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\SBS_NN.h(39,24): warning C4305: '초기화 중': 'int'에서 'float'(으)로 잘립니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\SBS_NN.h(47,11): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\SBS_NN.h(53,27): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\SBS_NN.h(324,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\SBS_NN.h(343,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\SBS_NN.h(362,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\SBS_NN.h(372,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\SBS_NN.h(387,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\SBS_NN.h(418,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\core\mat.hpp(1965,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\core\persistence.hpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\core\utility.hpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(613,9): error C2143: 구문 오류: '}'이(가) '상수' 앞에 없습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(613,9): error C2059: 구문 오류: '상수'
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(619,5): error C2143: 구문 오류: ';'이(가) '}' 앞에 없습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(619,5): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(666,44): error C2039: 'getDefaultGrid': 'cv::ml::SVM'의 멤버가 아닙니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(479,20): message : 'cv::ml::SVM' 선언을 참조하십시오.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(667,49): error C2039: 'getDefaultGrid': 'cv::ml::SVM'의 멤버가 아닙니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(479,20): message : 'cv::ml::SVM' 선언을 참조하십시오.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(668,49): error C2039: 'getDefaultGrid': 'cv::ml::SVM'의 멤버가 아닙니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(479,20): message : 'cv::ml::SVM' 선언을 참조하십시오.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(669,49): error C2039: 'getDefaultGrid': 'cv::ml::SVM'의 멤버가 아닙니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(479,20): message : 'cv::ml::SVM' 선언을 참조하십시오.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(670,49): error C2039: 'getDefaultGrid': 'cv::ml::SVM'의 멤버가 아닙니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(479,20): message : 'cv::ml::SVM' 선언을 참조하십시오.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(671,49): error C2039: 'getDefaultGrid': 'cv::ml::SVM'의 멤버가 아닙니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(479,20): message : 'cv::ml::SVM' 선언을 참조하십시오.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(665,18): error C2575: 'trainAuto': 멤버 함수와 기본만 virtual일 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(672,44): error C2059: 구문 오류: '상수'
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(679,51): error C2270: 'getSupportVectors': 비멤버 함수에 한정자를 사용할 수 없습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(679,53): error C2059: 구문 오류: '상수'
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(696,99): error C2270: 'getDecisionFunction': 비멤버 함수에 한정자를 사용할 수 없습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(696,101): error C2059: 구문 오류: '상수'
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(723,1): error C2504: 'StatModel': 기본 클래스를 정의하지 않았습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(920,1): error C2504: 'StatModel': 기본 클래스를 정의하지 않았습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(1245,1): error C2504: 'StatModel': 기본 클래스를 정의하지 않았습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(1393,1): error C2504: 'StatModel': 기본 클래스를 정의하지 않았습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(1494,1): error C2059: 구문 오류: '}'
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\OpenCV\Include\opencv2\ml.hpp(1494,1): error C2143: 구문 오류: ';'이(가) '}' 앞에 없습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(29,46): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(30,46): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(39,12): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(49,6): error C2182: 'DrawAxis': 이 'void' 사용은 유효하지 않습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(49,15): error C2065: 'Mat': 선언되지 않은 식별자입니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(49,20): error C2065: 'src': 선언되지 않은 식별자입니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(50,1): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(51,8): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(51,8): error C3861: 'Scalar': 식별자를 찾을 수 없습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(52,2): error C2059: 구문 오류: 'for'
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(52,2): error C2143: 구문 오류: ')'이(가) ';' 앞에 없습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(52,19): error C2143: 구문 오류: ';'이(가) '<' 앞에 없습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(52,19): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(52,19): error C2059: 구문 오류: '<'
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(52,38): error C2143: 구문 오류: ';'이(가) '++' 앞에 없습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(52,38): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(52,37): error C2086: 'int i': 재정의
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(52,17): message : 'i' 선언을 참조하십시오.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(52,38): error C2059: 구문 오류: '++'
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(52,40): error C2059: 구문 오류: ')'
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(53,2): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(53,2): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(58,1): error C2059: 구문 오류: '}'
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(58,1): error C2143: 구문 오류: ';'이(가) '}' 앞에 없습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(63,1): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\Users\User\Documents\GitHub\GameAI\Neural\RBE\main.cpp(63,1): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
