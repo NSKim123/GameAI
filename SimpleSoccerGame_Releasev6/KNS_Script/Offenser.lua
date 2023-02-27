@@ -50,14 +50,34 @@ function Offenser:Pass(id)
     
     pos,getball=GetHomeAgentPos(self.AgentID)
     pos1,_=GetHomeAgentPos(id)
-    
+
+
+    minlen=100000
+    for i =1,4 do
+        
+        pos2,_=GetAwayAgentPos(i)
+        
+        l = pos1-pos
+        tlen = l:getmag()
+        if tlen<=minlen then
+            minlen = tlen
+        end
+    end
     
     if getball == false then
         return 0.0
     end
+
     t = pos1-pos
     len = t:getmag()
-    re =1.0-(len/550.0)
+
+    if minlen <= 20
+        re = len/550.0
+    else
+        re = 1 - len /550.0
+    end
+
+    
     if re<=0.0 then
         re =0.0
     end
