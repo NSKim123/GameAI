@@ -1,0 +1,116 @@
+﻿  main.cpp
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\OpenCV\Include\opencv2\core\mat.hpp(1965,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\OpenCV\Include\opencv2\core\persistence.hpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\OpenCV\Include\opencv2\core\utility.hpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\vector.h(56,11): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\vector.h(71,11): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\Lua.h(133,35): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(43,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(116,48): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(117,48): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(118,48): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(119,48): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(120,48): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(276,67): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(276,55): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(282,70): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(282,57): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(372,38): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(459,41): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(463,41): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(469,41): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(473,41): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(505,41): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(505,73): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(506,54): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(506,99): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(511,47): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(511,32): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(518,64): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(518,41): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(519,95): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(519,67): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(519,101): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(521,64): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(521,41): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(522,95): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(522,67): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(522,101): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(524,45): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(524,31): warning C4244: '인수': 'float'에서 '_Tp'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=int
+          ]
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(536,36): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(544,38): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(550,38): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(556,38): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(562,38): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(568,38): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(576,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(580,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\main.cpp(587,37): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\SimpleSoccerGame\LUA\InitLua.h(10): warning C4172: 지역 변수 또는 임시: _iob의 주소를 반환하고 있습니다.
+LINK : warning LNK4098: 'LIBCMT' defaultlib가 다른 라이브러리와 충돌합니다. /NODEFAULTLIB:library를 사용하십시오.
+  SimpleSoccerGame.vcxproj -> C:\Users\User\Downloads\SimpleSoccerGame_2023_02_22\Debug\SimpleSoccerGame.exe
