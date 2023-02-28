@@ -13,21 +13,26 @@ end
 function Goalkeeper:FrameMove()
     pos,getball=GetHomeAgentPos(GOALKEEPER)
     bpos,bstate= GetBallPos()
+    bpos.x=0
+    pos.x=0
+    t= (bpos-pos)
+    len = t:getmag()
+    t:norm()
 
-    tmp = bpos - pos
-    len = tmp:getmag()
+    posOff1,_ = GetAwayAgentPos(OFFENSER1)
+    posOff2,_ = GetAwayAgentPos(OFFENSER2)
 
-    if (len <= 250) then
-        t = (bpos-pos):norm()
-        AgentMove(GOALKEEPER,t)
-    
+    posOff = (posOff2-posOff1)/2
+
+
+    if len > 1000.0 then
+        t2 = posOff - pos
+        t2:norm()
+        AgentMove(GOALKEEPER,t2)    
     else
-        bpos.x=0
-        pos.x=0
-        t = (bpos-pos):norm()
         AgentMove(GOALKEEPER,t)
     end
-
+    
     if getball==true then
         passid = math.random(1)
         if passid==0 then 

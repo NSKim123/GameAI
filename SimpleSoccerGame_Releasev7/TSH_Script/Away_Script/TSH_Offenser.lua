@@ -8,18 +8,18 @@ local function new(id)
 end
 
 function Offenser:Init()
+    --Initiation:clear
     for i=0,100 do 
         self.Actrate[i]=-1
     end
+
     for i=0,6 do 
         self.FSMrate[i]=0
     end
 end
 
 function Offenser:Move()
-    
     pos,getball=GetHomeAgentPos(self.AgentID)
-       
 
     if getball ==false then
         return 1.0
@@ -27,9 +27,7 @@ function Offenser:Move()
 
     minlen=100000
     for i =1,4 do
-        
         pos1,getball1=GetAwayAgentPos(i)
-        
         t = pos1-pos
         len = t:getmag()
         if len<=minlen then
@@ -47,11 +45,8 @@ function Offenser:Pass(id)
     if self.AgentID==id then
         return 0.0
     end
-    
     pos,getball=GetHomeAgentPos(self.AgentID)
     pos1,_=GetHomeAgentPos(id)
-    
-    
     if getball == false then
         return 0.0
     end
@@ -65,17 +60,14 @@ function Offenser:Pass(id)
 end
 
 function Offenser:Shoot()
-    if self.AgentID==0 then
+    if self.AgentID==id then
         return 0.0
     end
-    
     pos,getball=GetHomeAgentPos(self.AgentID)
     pos1,_=GetAwayAgentPos(0)
-       
     if getball == false then
         return 0.0
     end
-
     t = pos1-pos
     len = t:getmag()
     re =1.0-len/550.0
@@ -87,11 +79,8 @@ end
      
 
 function Offenser:Defense()
-   
     pos,_=GetHomeAgentPos(self.AgentID)
     pos1,getball=GetAwayAgentPos(self.AgentID)
-     
-    
     t = pos1-pos
     t:norm()
     AgentMove(self.AgentID,t)
@@ -133,14 +122,9 @@ end
 
 function Offenser:onAction(id)
     if id==0 then
-        
         pos,getball=GetHomeAgentPos(self.AgentID)
-        
-        
         if getball==true then
-            
             pos1,_=GetAwayAgentPos(0)
-                        
             t = pos1-pos
             t:norm()
             AgentMove(self.AgentID,t)

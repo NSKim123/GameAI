@@ -1,5 +1,6 @@
 require("Tool/function")
 local Offenser= require("JEC_Script/Offenser")
+local Offenser2 = require("JEC_Script/Offenser2")
 local Defender= require("JEC_Script/Defender")
 local Goalkeeper=require("JEC_Script/Goalkeeper")
 
@@ -12,7 +13,7 @@ DAgent2= nil
 function onInit()
 	GAgent=Goalkeeper()
 	AAgent1= Offenser(OFFENSER1)
-	AAgent2= Offenser(OFFENSER2)
+	AAgent2= Offenser2(OFFENSER2)
 	DAgent1= Defender(DEFENDER1)
 	DAgent2= Defender(DEFENDER2)
 

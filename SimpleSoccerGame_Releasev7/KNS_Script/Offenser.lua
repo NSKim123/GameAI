@@ -17,32 +17,53 @@ function Offenser:Init()
 end
 
 function Offenser:Move()
+    
     pos,getball=GetHomeAgentPos(self.AgentID)
+       
 
     if getball ==false then
         return 1.0
     end
 
-     EnemyPos, _ = GetAwayAgentPos(0)
-     len = EnemyPos:getmag()
-
-     if (len > 240) then
-        return 1.0
+    minlen=100000
+    for i =1,4 do
+        
+        pos1,getball1=GetAwayAgentPos(i)
+        
+        t = pos1-pos
+        len = t:getmag()
+        if len<=minlen then
+            minlen = len
+        end
     end
-
-     return 0.0
+    if minlen>=200 then
+        return 1.0
+    else
+        return minlen/200.0
+    end
 end
-
 
 function Offenser:Pass(id)
-
-    return 0.0
-end
-
-function Offenser:Shoot()
+    if self.AgentID==id then
+        return 0.0
+    end
+    
     pos,getball=GetHomeAgentPos(self.AgentID)
-    pos1,_=GetAwayAgentPos(0)
+    pos1,_=GetHomeAgentPos(id)
 
+
+    minlen=100000
+    for i =1,4 do
+        
+        pos2,_=GetAwayAgentPos(i)
+        
+        l = pos2-pos
+        tlen = l:getmag()
+        if tlen<=minlen then
+            minlen = tlen
+        end
+    end
+    
     if getball == false then
         return 0.0
     end
@@ -50,17 +71,46 @@ function Offenser:Shoot()
     t = pos1-pos
     len = t:getmag()
 
-    if len <= 260 then
-        return 1.0
+    if minlen <= 20 then
+        re = len/550.0
+    else
+        re = 1 - len /550.0
+    end
+    
+    if re<=0.0 then
+        re =0.0
+    end
+    return re
+end
+
+function Offenser:Shoot()
+    if self.AgentID==0 then
+        return 0.0
+    end
+    
+    pos,getball=GetHomeAgentPos(self.AgentID)
+    pos1,_=GetAwayAgentPos(0)
+       
+    if getball == false then
+        return 0.0
     end
 
-    return 0.0
+    t = pos1-pos
+    len = t:getmag()
+    re =1.0-len/550.0
+    if re<=0.0 then
+        re =0.0
+    end
+    return re
 end
      
 
 function Offenser:Defense()
+   
     pos,_=GetHomeAgentPos(self.AgentID)
     pos1,getball=GetAwayAgentPos(self.AgentID)
+     
+    
     t = pos1-pos
     t:norm()
     AgentMove(self.AgentID,t)
@@ -102,16 +152,32 @@ end
 
 function Offenser:onAction(id)
     if id==0 then
+        
         pos,getball=GetHomeAgentPos(self.AgentID)
-
+        
+        
         if getball==true then
-            pos1,_= GetAwayAgentPos(0)
+            
+            pos1,_=GetAwayAgentPos(0)
+                        
             t = pos1-pos
             t:norm()
             AgentMove(self.AgentID,t)
+        else
+            pos1,_=GetBallPos()
+            t = pos1-pos
+            if t:getmag()<=100 then
+                t:norm()
+                AgentMove(self.AgentID,t)
+            else
+                pos1,_=GetAwayAgentPos(0)
+                t = pos1-pos
+                t:norm()
+                AgentMove(self.AgentID,t)
+            end
         end
+       
     end
-
     if id==1 then
         AgentPass(self.AgentID,GOALKEEPER)
     end

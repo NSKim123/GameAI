@@ -21,6 +21,7 @@ function Defender:FrameMove()
             AgentTackle(self.AgentID)
         end
     end
+
     if getball==true then
         passid = math.random(1)
         if passid==0 then 

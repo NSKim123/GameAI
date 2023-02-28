@@ -8,9 +8,11 @@ local function new(id)
 end
 
 function Offenser:Init()
+    --Initiation:clear
     for i=0,100 do 
         self.Actrate[i]=-1
     end
+
     for i=0,6 do 
         self.FSMrate[i]=0
     end
@@ -32,7 +34,7 @@ function Offenser:Move()
             minlen = len
         end
     end
-    if minlen>=300 then
+    if minlen>=200 then
         return 1.0
     else
         return minlen/200.0
@@ -48,15 +50,6 @@ function Offenser:Pass(id)
     if getball == false then
         return 0.0
     end
-
-    posGK,_ = GetAwayAgentPos(0)
-    t3 = posGK - pos
-    shootLen = t3:getmag()
-
-    if shootLen <= 1550 then
-        return 0.0
-    end 
-
     t = pos1-pos
     len = t:getmag()
     re =1.0-(len/550.0)
@@ -77,7 +70,7 @@ function Offenser:Shoot()
     end
     t = pos1-pos
     len = t:getmag()
-    re =1.0-len/1550.0
+    re =1.0-len/550.0
     if re<=0.0 then
         re =0.0
     end
@@ -88,16 +81,9 @@ end
 function Offenser:Defense()
     pos,_=GetHomeAgentPos(self.AgentID)
     pos1,getball=GetAwayAgentPos(self.AgentID)
-    posDefender = GetHomeAgentPos(self.AgentID-2)
-    t2  = posDefender - pos1
-    defLen = t2:getmag()
-    if defLen > 150.0 then
-        t = pos1-pos
-        t:norm()
-        AgentMove(self.AgentID,t)
-    end
-    
-
+    t = pos1-pos
+    t:norm()
+    AgentMove(self.AgentID,t)
     if getball==true then
         AgentTackle(self.AgentID)
     end

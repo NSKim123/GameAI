@@ -53,14 +53,14 @@ function Defender:FrameMove()
     --When Game Start or Rematch move to GK
     if posSelf.x ~= posGK.x then
         AgentMove(self.AgentID, d1_location)
-    end
 
-    if posGK.y > 234 then
-        AgentMove(self.AgentID, d1_location)
-    end
+        if posGK.y > 234 then
+            AgentMove(self.AgentID, d1_location)
+        end
     
-    if posGK.y < 234 then
-        AgentMove(self.AgentID, goal_Mid)
+        if posGK.y < 234 then
+            AgentMove(self.AgentID, goal_Mid)
+        end
     end
 end
 
